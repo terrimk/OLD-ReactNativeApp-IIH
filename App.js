@@ -6,6 +6,7 @@
  * Summer of 2020
  */
 
+import 'react-native-gesture-handler';
 import React, {Component} from 'react';
 
 import {StyleSheet, ScrollView, View, Text, StatusBar} from 'react-native';
