@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   header: {
-    flex: 2,
+    flex: 3,
   },
   menu: {
     flex: 3,
