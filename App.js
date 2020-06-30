@@ -15,12 +15,9 @@ import {StyleSheet, ScrollView, View, Text, StatusBar} from 'react-native';
 
 import Heading from './Heading';
 
-const App: () => React$Node = () => {
+function HomeScreen() {
   return (
-    <NavigationContainer>
-    <>
-      <StatusBar barStyle="dark-content" />
-      <View style={styles.container}>
+    <View style={styles.container}>
         <View style={styles.header}>
           <Heading />
         </View>
@@ -29,6 +26,20 @@ const App: () => React$Node = () => {
        
         <Text style={styles.footer}>FOOTER WILL BE HERE</Text>
       </View>
+  );
+}
+
+const Stack = createStackNavigator();
+
+const App: () => React$Node = () => {
+  return (
+    <NavigationContainer>
+    <>
+      <StatusBar barStyle="dark-content" />
+      <Stack.Navigator>
+        <Stack.Screen name="Home" component={HomeScreen} />
+      </Stack.Navigator>
+      
     </>
     </NavigationContainer>
   );
